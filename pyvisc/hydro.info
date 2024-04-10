@@ -1,0 +1,116 @@
+# comments start with '#' and inline comment start with ';'
+[General]
+fPathOut = /media/yore/a5fdaa95-869f-41de-a370-5ceb9eca3c8b/CLVisc_results
+#The absolute path for output directory
+
+[initial_condition]
+initial_type = Trento_2_0                ; initial condition, choices = [MCGlauber, Glauber, Trento_1_3, Trento_2_0, ampt, handcradfted] for vanishing baryon density
+
+reduced_thickness = 0                    ; (For Trento) Reduced thickness parameter, and the default value is 0
+fluctuation = 1                          ; (For Trento) Gamma distribution shape parameter k for nucleon fluctuations, and the default value is 1
+nucleon_width = 0.5                      ; (For Trento) Gaussian nucleon width in fm, and the default value is 0.5
+constit_width = 0.5                      ; (For Trento) *** ONLY FOR TRENTO_2_0 *** Gaussian constituent width in fm, and the default value is set equal to the nucleon_width
+constit_number = 1                       ; (For Trento) *** ONLY FOR TRENTO_2_0 *** Number of constituents inside the nucleon, and the default value is 1
+nucleon_min_dist = 0                     ; (For Trento) *** ONLY FOR TRENTO_2_0 *** Minimum nucleon-nucleon distance (fm) for Woods-Saxon nuclei (spherical and deformed), and the default value is 0
+normalization = 1                        ; (For Trento) Overall normalization factor, and the default value is 1
+
+Initial_profile = ./ev.dat               ; The path to initial energy density profile or the path to h5 file
+Initial_nb_profile = ./nb.dat            ; The path to initial baryon density profile
+
+oneshot = no                          
+
+SQRTS = 165                              ; Beam energy in units of GeV/n; like Au+Au 200 GeV; Pb+Pb 2760 GeV, SQRTS=2760
+NucleusA = Au                            ; The species projectile A [Au, Pb]
+NucleusB = Au                            ; The species projectile B [Au, Pb] 
+KFACTOR = 10.8                           ; The normlization factor for initial energy profile                                                   $
+cent = 0_6                               ; Collision centraility
+Hwn = 0.95                               ; In range [0,1), energy density contribution from number of wounded nucleons
+
+Eta_flat = 2.25                          ; The width of the plateau along etas at mid rapidity                                                  $  
+Eta_gw = 0.3                             ; The gaussian weight along etas for energy deposition                                                 $
+r_gw = 0.5                               ; The gaussian weight along r for energy deposition
+
+
+Eta0_nb = 2.7                            ; Eta0_nb in  envelope function of baryon number density
+Eta_nb_gw_p = 0.2                        ; sigma0^+ in  envelope function of baryon number density
+Eta_nb_gw_m = 1.9                        ; sigma0^- in  envelope function of baryon number density
+
+
+
+[hydrodynamics]
+run_evolution = yes                      ; True to switch on hydro evolution
+TAU0 = 0.7                               ; time when hydro starts                                                                                $
+NX = 150                                 ; Grid size along x direction                                                                           $       
+NY = 150                                 ; Grid size along y direction                                                                           $
+NZ = 150                                 ; Grid size along z direction                                                                           $
+
+DT = 0.01                                ; time step for hydro evolution                                                                         $
+DX = 0.2                                 ; x step for hydro evolution                                                                            $
+DY = 0.2                                 ; y step for hydro evolution                                                                            $
+DZ = 0.2                                 ; z step for hydro evolution                                                                            $
+
+ntskip = 10                              ; Skip time steps for finding hypersurface 
+nxskip = 2                               ; Skip steps along x for finding hypersurface 
+nyskip = 2                               ; Skip steps along y for finding hypersurface 
+nzskip = 2                               ; Skip steps along z for bulk finding hypersurface
+
+
+pimn_on = No                             ; True to switch on the evolution for shear tensor pimn
+CETA_YMIN = 0.08                         ; minimum eta/s(T)
+CETA_XMIN = 0.0                          ; temperature for minimum eta/s(T)
+CETA_LEFT_SLOP = 0.0                     ; slop of eta/s(T) when T < ETAOS_XMIN
+CETA_RIGHT_SLOP = 0.0                    ; slop of eta/s(T) when T > ETAOS_XMIN
+
+
+bulkpr_on = No                           ; True to switch on the evolution for bulk pressure PI
+CZETA_duke = True                        ; the temperature dependence of bulk pressure transport coefficient.
+CZETA = 0.0                              ; the constant bulk pressure transport coefficient. 
+
+
+baryon_on = No                           ; True to switch on the evolution for baryon current nb
+qu_on = No                               ; True to switch on the evolution for baryon diffusion current qmu 
+CB_XMIN = 0.4                            ; temperature for minimum CB(T)
+
+source = False                           ; True to switch on source terms (dynamical initial condition)
+save_hypersf = Yes                       ; True to save hypersf
+calc_vorticity = No                      ; True to calculate vorticity
+save_bulkinfo = yes                      ; True to save  bulk information during evolution
+
+
+[EOS]
+eos_type  = hotqcd2014                   ; choices = [ideal_gas, first_order, lattice_wb, lattice_pce150, lattice_pce165  $, pure_gauge, HotQCD2014  $, neosB, neosBQS, chiral, eosq, njl_model]
+switch_eos = hotqcd2014                  ; switch to different eos at hypersurface, choices = [ideal_gas, first_order, lattice_wb, lattice_pce150, lattice_pce165, pure_gauge, HotQCD2014, neosB, neosBQS, chiral, eosq, njl_model, HARDON_GAS]
+
+#eos_type  = neosbqs                     ; choices = [ideal_gas, first_order, lattice_wb, lattice_pce150, lattice_pce165, pure_gauge, HotQCD2014, neosB, neosBQS, chiral,eosq, njl_model]
+#switch_eos = neosbqs                    ; switch to different eos at hypersurface, choices = [ideal_gas, first_order, lattice_wb, lattice_pce150, lattice_pce165, pure_gauge, HotQCD2014, neosB, neosBQS, chiral, eosq, njl_model, HARDON_GAS]
+
+[freezeeout_and_afterburner]
+run_cooperfrye = yes                     ; True to compute cooperfrye samping or integration
+run_afterbuner = no                      ; True to switch on afterbuner
+
+cornelius = No                           ; True to switch on cornelius method to get hypersuface element
+corona = yes                             ; True to compute equal tau freezeout at initial proper time
+Tfrz_on = No                             ; True to switch on the constant temperature freezeout
+Edfrz = 0.4                              ; Freeze out energy density, default=0.4 Gev/fm^3
+TFRZ = 0.150                             ; Freeze out temperature, default=0.137   
+sample_type= mcgpu                       ; Sample method, choices = [mc,mcgpu,smooth] , hint: mcgpu only for finite baryon density 
+reso_decay = yes                         ; True to switch on resonance decay, if you want to run afterburner, please set it False
+nsample = 2000                           ; The number of sampling
+afterburner= SMASH                       ; Afterburner type: SMASH and URQMD
+
+[coLBT_hydro]
+Colhydro= No                             ; switch on CoLBT-hydro
+trans_model=LBT                          ; Transport model for CoLBT-hydro, defaut: LBT
+LBT_config = ~/LBTinput.txt              ; The path to LBT configuration file
+LBT_table = ~/readindatafile             ; The path to LBT table file
+parton_dat = ~/parton_info_20_30_0.dat   ; The path to the file including momentum information of initial parton
+jet_r_gw = 0.2                           ; The gaussion weight along r in source deposition
+jet_eta_gw = 0.2                         ; The gaussion weight along etas in source deposition
+Ecut = 3                                 ; energy cut for themal parton to medium 
+
+
+[Test]
+LAM1 = -10                               ; coefficient for pimn^2 term
+
+[opencl]
+local_workgroup_size = 64                ; Local workgroup size in one dimension
