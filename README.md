@@ -109,7 +109,7 @@ python CLVisc.py hydro.info 0 0 1
 
    where the first `0` is the GPU device code, the second `0` and `1` are the first event number and the last event number that you want to produce.
 
-# Issue
+# Issues
 
 * If you find the error that `can not find "GL.h" file`, please run command,
 
