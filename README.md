@@ -22,11 +22,11 @@
 
 # What's New
 
-1) It can run with python3.11 and other new version dependence (except GCC, it still needs GCC7.5) now.
+1. It can run with python3.11 and other new version dependence (except GCC, it still needs GCC7.5) now.
 
-2) It can use T<sub>R</sub>ENTo2.0 to produce the nucleus's initial state and can tune the T<sub>R</sub>ENTo's parameters in the `hydro.info` now.
+2. It can use T<sub>R</sub>ENTo2.0 to produce the nucleus's initial state and can tune the T<sub>R</sub>ENTo's parameters in the `hydro.info` now.
 
-3) Fixed some minor issues.
+3. Fixed some minor issues.
 
 # Installtion
 
