@@ -9,25 +9,24 @@
       ##    ## ##         ## ##    ##  ##    ## ##    ## 
        ######  ########    ###    ####  ######   ###### 
 
-CCNU-LBNL-Viscous hydrodynamic model
+### CCNU-LBNL-Viscous hydrodynamic model
 
-Original Version: https://github.com/lgpang/clvisc <br>
-CLVisc3.0 Version: https://github.com/wangyunxiang1986/clvisc
+> Original Version: https://github.com/lgpang/clvisc <br>
+> CLVisc3.0 Version: https://github.com/wangyunxiang1986/clvisc
 
-When using (3+1)-D CLVisc hydrodynamics model, please cite:
+### When using (3+1)-D CLVisc hydrodynamics model, please cite:
     
-(a) L.-G. Pang, H. Petersen, and X.-N. Wang, [PhysRevC 97, 064918](https://link.aps.org/doi/10.1103/PhysRevC.97.064918) <br>
-(b) X.-Y. Wu, G.-Y. Qin, L.-G. Pang, and X.-N. Wang, [Phys.Rev.C 105, 034909](https://link.aps.org/doi/10.1103/PhysRevC.105.034909) <br>
-(c) J.-Q. Tao, X. Fan, B.-W. Zhang, (In writing)
+> (a) L.-G. Pang, H. Petersen, and X.-N. Wang, [PhysRevC 97, 064918](https://link.aps.org/doi/10.1103/PhysRevC.97.064918) <br>
+> (b) X.-Y. Wu, G.-Y. Qin, L.-G. Pang, and X.-N. Wang, [Phys.Rev.C 105, 034909](https://link.aps.org/doi/10.1103/PhysRevC.105.034909) <br>
+> (c) J.-Q. Tao, X. Fan, B.-W. Zhang, (In writing)
 
 # What's New:
 
 1) It can run with python3.11 and other new version dependence (except GCC, it still needs GCC7.5) now.
 
-2) It can use TRENTO2.0 to produce the nucleus's initial state and can tune the TRENTO's parameters in the hydro.info now.
+2) It can use T<sub>R</sub>ENTo2.0 to produce the nucleus's initial state and can tune the T<sub>R</sub>ENTo's parameters in the hydro.info now.
 
 3) Fixed some minor issues.
-
 
 # Installtion
 
@@ -40,8 +39,7 @@ When using (3+1)-D CLVisc hydrodynamics model, please cite:
    sudo apt-get -y install cuda-toolkit-12-4
 ```   
 
-   Note: CUDA already includes OpenCL, you do NOT need to install OpenCL additionally!
-   You only need to write these commands,
+   __Note__: CUDA already includes OpenCL, you do NOT need to install OpenCL additionally! You only need to write these commands,
          
 ```bash
    export OpenCL_INCPATH=/usr/local/cuda-12.4/include
@@ -50,17 +48,17 @@ When using (3+1)-D CLVisc hydrodynamics model, please cite:
            
    in your ".bashrc" file.
          
-   CUDA official download website: https://developer.nvidia.com/cuda-downloads
+   > CUDA official download website: https://developer.nvidia.com/cuda-downloads
 
 ### 2. Install Anaconda (example for Ubuntu22.04.4 LTS and Anaconda3):
 
-   Download Anaconda from the website, https://www.anaconda.com/download/ and run
+   Download Anaconda from the website, https://www.anaconda.com/download/, and run
 
 ```bash   
    sh Anaconda3-2024.02-1-Linux-x86_64.sh
 ```
 
-   Note: Anaconda3 already includes BOOST, you do NOT need to install BOOST additionally!
+   __Note__: Anaconda3 already includes BOOST, you do NOT need to install BOOST additionally!
 
 ### 3. Install PyOpenCL:
 
@@ -119,12 +117,11 @@ When using (3+1)-D CLVisc hydrodynamics model, please cite:
    sudo apt install mesa-common-dev libglu1-mesa-dev freeglut3-dev
 ```
 
-* If you find the error that `anaconda3/lib/libboost_program_options.so.1.82.0: undefined reference to `std::__throw_bad_array_new_length()@GLIBCXX_3.4.29'`, 
+* If you find the error that ``anaconda3/lib/libboost_program_options.so.1.82.0: undefined reference to `std::__throw_bad_array_new_length()@GLIBCXX_3.4.29'``, 
 please use the new version of GCC.
 
 * If you find the error that `raise ImportError("Failed to import any qt binding")`,
 please comment out `import matplotlib.pyplot as plt` in the PYTHON files.
-
 
 # Other
 
