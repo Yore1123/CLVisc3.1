@@ -14,17 +14,17 @@
 > Original Version: https://github.com/lgpang/clvisc <br>
 > CLVisc3.0 Version: https://github.com/wangyunxiang1986/clvisc
 
-### When using (3+1)-D CLVisc hydrodynamics model, please cite:
+### When using this model, please cite:
     
 > (a) L.-G. Pang, H. Petersen, and X.-N. Wang, [PhysRevC 97, 064918](https://link.aps.org/doi/10.1103/PhysRevC.97.064918) <br>
 > (b) X.-Y. Wu, G.-Y. Qin, L.-G. Pang, and X.-N. Wang, [Phys.Rev.C 105, 034909](https://link.aps.org/doi/10.1103/PhysRevC.105.034909) <br>
 > (c) J.-Q. Tao, X. Fan, B.-W. Zhang, (In writing)
 
-# What's New:
+# What's New
 
 1) It can run with python3.11 and other new version dependence (except GCC, it still needs GCC7.5) now.
 
-2) It can use T<sub>R</sub>ENTo2.0 to produce the nucleus's initial state and can tune the T<sub>R</sub>ENTo's parameters in the hydro.info now.
+2) It can use T<sub>R</sub>ENTo2.0 to produce the nucleus's initial state and can tune the T<sub>R</sub>ENTo's parameters in the `hydro.info` now.
 
 3) Fixed some minor issues.
 
@@ -46,7 +46,7 @@
    export OpenCL_LIBPATH=/usr/local/cuda-12.4/lib64
 ```
            
-   in your ".bashrc" file.
+   in your `~/.bashrc` file.
          
    > CUDA official download website: https://developer.nvidia.com/cuda-downloads
 
@@ -125,5 +125,5 @@ please comment out `import matplotlib.pyplot as plt` in the PYTHON files.
 
 # Other
 
-If you want to run CLVisc3.1 on the computer cluster and you can't use the `sudo` command, 
-please download the corresponding installation package for local installation.
+         If you want to run CLVisc3.1 on the computer cluster and you can't use the `sudo` command, 
+         please download the corresponding installation package for local installation.
