@@ -1,7 +1,7 @@
 # comments start with '#' and inline comment start with ';'
 [General]
-fPathOut = /media/yore/a5fdaa95-869f-41de-a370-5ceb9eca3c8b/CLVisc_results
-#The absolute path for output directory
+fPathOut = ./results
+#The path for output directory
 
 [initial_condition]
 initial_type = Trento_2_0                ; initial condition, choices = [MCGlauber, Glauber, Trento_1_3, Trento_2_0, ampt, handcradfted] for vanishing baryon density
@@ -22,12 +22,12 @@ oneshot = no
 SQRTS = 165                              ; Beam energy in units of GeV/n; like Au+Au 200 GeV; Pb+Pb 2760 GeV, SQRTS=2760
 NucleusA = Au                            ; The species projectile A [Au, Pb]
 NucleusB = Au                            ; The species projectile B [Au, Pb] 
-KFACTOR = 10.8                           ; The normlization factor for initial energy profile                                                   $
+KFACTOR = 10.8                           ; The normlization factor for initial energy profile                                                   
 cent = 0_6                               ; Collision centraility
 Hwn = 0.95                               ; In range [0,1), energy density contribution from number of wounded nucleons
 
-Eta_flat = 2.25                          ; The width of the plateau along etas at mid rapidity                                                  $  
-Eta_gw = 0.3                             ; The gaussian weight along etas for energy deposition                                                 $
+Eta_flat = 2.25                          ; The width of the plateau along etas at mid rapidity                                                    
+Eta_gw = 0.3                             ; The gaussian weight along etas for energy deposition                                                 
 r_gw = 0.5                               ; The gaussian weight along r for energy deposition
 
 
@@ -39,15 +39,15 @@ Eta_nb_gw_m = 1.9                        ; sigma0^- in  envelope function of bar
 
 [hydrodynamics]
 run_evolution = yes                      ; True to switch on hydro evolution
-TAU0 = 0.7                               ; time when hydro starts                                                                                $
-NX = 150                                 ; Grid size along x direction                                                                           $       
-NY = 150                                 ; Grid size along y direction                                                                           $
-NZ = 150                                 ; Grid size along z direction                                                                           $
+TAU0 = 0.7                               ; time when hydro starts                                                                                
+NX = 150                                 ; Grid size along x direction                                                                                
+NY = 150                                 ; Grid size along y direction                                                                           
+NZ = 150                                 ; Grid size along z direction                                                                           
 
-DT = 0.01                                ; time step for hydro evolution                                                                         $
-DX = 0.2                                 ; x step for hydro evolution                                                                            $
-DY = 0.2                                 ; y step for hydro evolution                                                                            $
-DZ = 0.2                                 ; z step for hydro evolution                                                                            $
+DT = 0.01                                ; time step for hydro evolution                                                                         
+DX = 0.2                                 ; x step for hydro evolution                                                                            
+DY = 0.2                                 ; y step for hydro evolution                                                                            
+DZ = 0.2                                 ; z step for hydro evolution                                                                            
 
 ntskip = 10                              ; Skip time steps for finding hypersurface 
 nxskip = 2                               ; Skip steps along x for finding hypersurface 

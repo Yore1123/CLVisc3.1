@@ -2,8 +2,8 @@ include(CheckLibraryExists)
 include(AddCompilerFlag)
 include(FindPkgConfig)
 
-include(GetGitRevisionDescription)
-git_describe(VERSION_MAJOR)
+#include(GetGitRevisionDescription)
+#git_describe(VERSION_MAJOR)
 
 string(TIMESTAMP BUILD_DATE)
 
