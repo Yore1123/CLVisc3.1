@@ -30,7 +30,7 @@
 
 # Installtion
 
-### 1. Install CUDA (example for Ubuntu22.04.4 LTS and CUDA12.4):
+### 1. Install CUDA (example for Ubuntu22.04.4 LTS and CUDA12.4)
 
 ```bash
 wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64/cuda-keyring_1.1-1_all.deb
@@ -49,7 +49,7 @@ in your `~/.bashrc` file.
 
 > CUDA official download website: https://developer.nvidia.com/cuda-downloads
 
-### 2. Install Anaconda (example for Ubuntu22.04.4 LTS and Anaconda3):
+### 2. Install Anaconda (example for Ubuntu22.04.4 LTS and Anaconda3)
 
 Download Anaconda from the website, https://www.anaconda.com/download/, and run
 ```bash   
@@ -58,13 +58,13 @@ sh Anaconda3-2024.02-1-Linux-x86_64.sh
 
 __Note__: Anaconda3 already includes BOOST, you do NOT need to install BOOST additionally!
 
-### 3. Install PyOpenCL:
+### 3. Install PyOpenCL
 
 ```bash
 pip install pyopencl
 ```
 
-### 4. Install GCC7.5 (example for Ubuntu22.04.4 LTS):
+### 4. Install GCC7.5 (example for Ubuntu22.04.4 LTS)
 
 ```bash
 sudo add-apt-repository "deb [arch=amd64] http://archive.ubuntu.com/ubuntu focal main universe"
@@ -73,13 +73,13 @@ sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-7 60 --slave /u
 sudo update-alternatives --config gcc
 ```
 
-### 5. Install CMAKE (example for Ubuntu22.04.4 LTS):
+### 5. Install CMAKE (example for Ubuntu22.04.4 LTS)
 
 ```bash
 sudo apt install cmake
 ```
 
-### 6. Install GSL (example for Ubuntu22.04.4 LTS):
+### 6. Install GSL (example for Ubuntu22.04.4 LTS)
 
 ```bash
 sudo apt install libgsl-dev
