@@ -115,6 +115,8 @@ sudo apt install mesa-common-dev libglu1-mesa-dev freeglut3-dev
 
 * If you find the error that `raise ImportError("Failed to import any qt binding")`, please comment out `import matplotlib.pyplot as plt` in the PYTHON files.
 
+* If you find the error that `boost::filesystem::create_directory: No such file or directory [system:2]: "/home/bwzhang/jqtao/.local/share/trento"`, please make sure that that path has already existed.
+
 # Other
 
 If you want to run CLVisc3.1 on the computer cluster and you can't use the `sudo` command, please download the corresponding installation package for local installation.
