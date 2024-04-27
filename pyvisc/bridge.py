@@ -153,7 +153,7 @@ def get_smash(cfg,gpu_id,idx):
 
         
 def get_trento_1_3(cfg,gpu_id,idx):
-    from ini.trento import AuAu200, PbPb2760, PbPb5020, RuRu200, Ru2Ru2200, Ru3Ru3200, Ru4Ru4200, ZrZr200, AuAu165
+    from ini.trento import AuAu200, PbPb2760, PbPb5020, RuRu200, Ru2Ru2200, Ru3Ru3200, Ru4Ru4200, ZrZr200, AuAu160, AuAu95
     dec_num = np.modf(cfg.SQRTS)[0]
     if dec_num < 0.00001:
         system = cfg.NucleusA + cfg.NucleusB+str(int(np.floor(cfg.SQRTS)))
@@ -177,8 +177,10 @@ def get_trento_1_3(cfg,gpu_id,idx):
         collision = Ru4Ru4200()
     elif system == 'ZrZr200':
         collision = ZrZr200()
-    elif system == 'AuAu165':
-        collision = AuAu165()
+    elif system == 'AuAu160':
+        collision = AuAu160()
+    elif system == 'AuAu95':
+        collision = AuAu95()
     else:
         print ("ERROR: Please check collision system !!!", system)
         exit(1)
@@ -217,7 +219,7 @@ def get_trento_1_3(cfg,gpu_id,idx):
     return  visc
 
 def get_trento_2_0(cfg,gpu_id,idx):
-    from ini.trento import AuAu200, PbPb2760, PbPb5020, RuRu200, Ru2Ru2200, Ru3Ru3200, Ru4Ru4200, ZrZr200, AuAu165
+    from ini.trento import AuAu200, PbPb2760, PbPb5020, RuRu200, Ru2Ru2200, Ru3Ru3200, Ru4Ru4200, ZrZr200, AuAu160, AuAu95
     dec_num = np.modf(cfg.SQRTS)[0]
     if dec_num < 0.00001:
         system = cfg.NucleusA + cfg.NucleusB+str(int(np.floor(cfg.SQRTS)))
@@ -241,8 +243,10 @@ def get_trento_2_0(cfg,gpu_id,idx):
         collision = Ru4Ru4200()
     elif system == 'ZrZr200':
         collision = ZrZr200()
-    elif system == 'AuAu165':
-        collision = AuAu165()
+    elif system == 'AuAu160':
+        collision = AuAu160()
+    elif system == 'AuAu95':
+        collision = AuAu95()
     else:
         print ("ERROR: Please check collision system !!!", system)
         exit(1)

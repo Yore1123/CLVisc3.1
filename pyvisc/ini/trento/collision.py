@@ -193,14 +193,21 @@ class ZrZr200(Collision):
                   'centrality_file':'zrzr200_cent.csv'}
         super(ZrZr200, self).__init__(config)
 
-class AuAu165(Collision):
+class AuAu160(Collision):
     def __init__(self):
         config = {'projectile':'Au',
                   'target':'Au',
-                  'cross_section':4.10,
-                  'centrality_file':'auau165_cent.csv'}
-        super(AuAu165, self).__init__(config)
+                  'cross_section':4.08,
+                  'centrality_file':'auau160_cent.csv'}
+        super(AuAu160, self).__init__(config)
 
+class AuAu95(Collision):
+    def __init__(self):
+        config = {'projectile':'Au',
+                  'target':'Au',
+                  'cross_section':3.80,
+                  'centrality_file':'auau95_cent.csv'}
+        super(AuAu95, self).__init__(config)
 
 
 if __name__=='__main__':

@@ -19,7 +19,7 @@ Initial_nb_profile = ./nb.dat            ; The path to initial baryon density pr
 
 oneshot = no                          
 
-SQRTS = 165                              ; Beam energy in units of GeV/n; like Au+Au 200 GeV; Pb+Pb 2760 GeV, SQRTS=2760
+SQRTS = 160                              ; Beam energy in units of GeV/n; like Au+Au 200 GeV; Pb+Pb 2760 GeV, SQRTS=2760
 NucleusA = Au                            ; The species projectile A [Au, Pb]
 NucleusB = Au                            ; The species projectile B [Au, Pb] 
 KFACTOR = 10.8                           ; The normlization factor for initial energy profile                                                   
